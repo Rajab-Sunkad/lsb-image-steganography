@@ -14,17 +14,15 @@ This project implements **Least Significant Bit (LSB) Image Steganography** in C
 ---
 
 ## Project Structure
-│
-├─ encode.c # Embeds secret text into BMP image
-├─ decode.c # Extracts hidden text from BMP image
-├─ common.h # Shared functions and definitions
-├─ types.h # Data structures used across the project
-├─ test_encode.c # Test program for encoding
-├─ beautiful.bmp # Sample BMP image
-├─ my.txt # Sample text file for encoding
-├─ secret.txt # Sample text file for decoding
-├─ stego.bmp # Resulting BMP image after encoding
-└─ README.md # Project documentation
+1. encode.c # Embeds secret text into BMP image
+2. decode.c # Extracts hidden text from BMP image
+3. common.h # Shared functions and definitions
+4. types.h # Data structures used across the project
+5. test_encode.c # Test program for encoding
+6. beautiful.bmp # Sample BMP image
+7. my.txt # Sample text file for encoding
+8. secret.txt # Sample text file for decoding
+9. stego.bmp # Resulting BMP image after encoding
 
 ---
 
@@ -52,7 +50,7 @@ This project implements **Least Significant Bit (LSB) Image Steganography** in C
     - my.txt : Text file to hide
     - stego.bmp : Output image with hidden message
 
--> Decode a Message
+-> **Decode a Message**
    ./decode stego.bmp secret.txt
    - stego.bmp : Image containing hidden message
    - secret.txt : Output file where hidden text will be saved
