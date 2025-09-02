@@ -1,2 +1,63 @@
-# lsb-image-steganography
-A C project that implements LSB (Least Significant Bit) Image Steganography on BMP files.  It hides secret text inside images and retrieves it without affecting image quality.
+# LSB Image Steganography
+
+## Overview
+This project implements **Least Significant Bit (LSB) Image Steganography** in C, allowing users to hide secret text inside BMP images and retrieve it without noticeable loss in image quality. Steganography is the art of concealing information within another medium, making it useful for secure communication and data protection.
+
+---
+
+## Features
+- **Encode** secret text into a BMP image.
+- **Decode** hidden text from the image.
+- Supports basic BMP images for hiding messages.
+- Easy-to-use C programs for embedding and extracting data.
+
+---
+
+## Project Structure
+│
+├─ encode.c # Embeds secret text into BMP image
+├─ decode.c # Extracts hidden text from BMP image
+├─ common.h # Shared functions and definitions
+├─ types.h # Data structures used across the project
+├─ test_encode.c # Test program for encoding
+├─ beautiful.bmp # Sample BMP image
+├─ my.txt # Sample text file for encoding
+├─ secret.txt # Sample text file for decoding
+├─ stego.bmp # Resulting BMP image after encoding
+└─ README.md # Project documentation
+
+---
+
+## How It Works
+1. **Encoding**:
+   - Reads the secret text file.
+   - Converts each character into bits.
+   - Modifies the **least significant bit (LSB)** of each pixel in the BMP image to store the message.
+2. **Decoding**:
+   - Reads the LSBs of the BMP image pixels.
+   - Reconstructs the hidden message bit by bit.
+   - Saves the extracted message to a text file.
+
+---
+
+## Usage
+
+-> **Compile**
+   gcc encode.c -o encode
+   gcc decode.c -o decode
+
+-> **Encode a Message**
+   ./encode beautiful.bmp my.txt stego.bmp
+    - beautiful.bmp : Original image
+    - my.txt : Text file to hide
+    - stego.bmp : Output image with hidden message
+
+-> Decode a Message
+   ./decode stego.bmp secret.txt
+   - stego.bmp : Image containing hidden message
+   - secret.txt : Output file where hidden text will be saved
+
+## Real-World Applications
+- Secure communication without alerting third parties.
+- Digital watermarking for copyright protection.
+- Organizing sensitive data inside images.
