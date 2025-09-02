@@ -46,14 +46,14 @@ This project implements **Least Significant Bit (LSB) Image Steganography** in C
 
 -> **Encode a Message**
    ./encode beautiful.bmp my.txt stego.bmp
-    - beautiful.bmp # Original image
-    - my.txt # Text file to hide
-    - stego.bmp # Output image with hidden message
+   - beautiful.bmp : Original image
+   - my.txt : Text file to hide
+   - stego.bmp : Output image with hidden message
 
 -> **Decode a Message**
    ./decode stego.bmp secret.txt
-   - stego.bmp # Image containing hidden message
-   - secret.txt # Output file where hidden text will be saved
+   - stego.bmp : Image containing hidden message
+   - secret.txt : Output file where hidden text will be saved
 
 ## Real-World Applications
 - Secure communication without alerting third parties.
